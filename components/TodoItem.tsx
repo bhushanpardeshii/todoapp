@@ -1,12 +1,13 @@
 // components/TodoItem.tsx
 import { useState, useEffect } from "react";
 import crublibrary from "@/lib/crud";
+import { Todo } from "@/types/todo";
 
 export default function TodoItem({
     todo,
     refresh,
 }: {
-    todo: any;
+    todo: Todo;
     refresh: () => void;
 }) {
     console.log('TodoItem received todo:', todo);

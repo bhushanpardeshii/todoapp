@@ -4,11 +4,12 @@ import { useAuth } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import crublibrary from "@/lib/crud";
 import TodoItem from "@/components/TodoItem";
+import { Todo } from "@/types/todo";
 
 export default function Home() {
   const { isLoaded, isSignedIn } = useAuth();
   const router = useRouter();
-  const [todos, setTodos] = useState<any[]>([]);
+  const [todos, setTodos] = useState<Todo[]>([]);
   const [value, setValue] = useState("");
   const [txHash, setTxHash] = useState("");
   const [loading, setLoading] = useState(false);
@@ -105,7 +106,7 @@ export default function Home() {
       await fetchTodos();
       setValue("");
       setTxHash("");
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error(err);
       setErrorMsg("An error occurred. Please try again later.");
     } finally {
