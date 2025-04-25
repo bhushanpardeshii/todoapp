@@ -6,4 +6,8 @@ export default function Page() {
             <SignIn />
         </div>
     )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 37233e9c6798092a45f23bd4b1254373cd599be1
