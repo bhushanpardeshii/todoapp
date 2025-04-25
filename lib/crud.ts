@@ -2,8 +2,8 @@
 import * as crublibrary from 'crublibrary';
 
 // Initialize the library with configuration
-const apiUrl = process.env.NEXT_PUBLIC_CRUD_API_URL;
-const apiKey = process.env.NEXT_PUBLIC_CRUD_API_KEY;
+const apiUrl = "https://filepoint-backend.onrender.com";
+const apiKey = "df92af88aa6f6e8468005ac6c9e9dcd3";
 
 if (!apiUrl || !apiKey) {
     throw new Error("API URL and KEY must be set in the environment variables");
